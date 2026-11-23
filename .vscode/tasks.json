@@ -1,0 +1,18 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "maui: Build",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceFolder}/MauiApp01.csproj",
+                "-f",
+                "net11.0-windows10.0.19041.0"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

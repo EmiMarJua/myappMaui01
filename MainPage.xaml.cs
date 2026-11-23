@@ -1,4 +1,6 @@
-﻿namespace MauiApp01;
+﻿using System.Runtime.InteropServices.ObjectiveC;
+
+namespace MauiApp01;
 
 public partial class MainPage : ContentPage
 {
@@ -17,6 +19,18 @@ public partial class MainPage : ContentPage
 			CounterBtn.Text = $"Clicked {count} time";
 		else
 			CounterBtn.Text = $"Clicked {count} times";
+
+		SemanticScreenReader.Announce(CounterBtn.Text);
+	}
+
+    private void Button_Clicked(object sender, EventArgs e)
+	{
+	}
+
+    private void ClearBtn_Clicked(object sender, EventArgs e)
+	{
+		
+		CounterBtn.Text = $"Clicked {count = 0} time";
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}

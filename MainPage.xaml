@@ -1,28 +1,30 @@
-﻿<ContentPage x:Class="MauiApp01.MainPage">
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp01"
+             x:Class="MauiApp01.MainPage"
+             x:DataType="local:MainPage"
+             Title="Convertidor de Temperatura">
+        
+        <ScrollView>
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            
+        <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="center"><!--pila de elementos visuales-->
+        
+        <Label Text="Ingresa la Temperatura que vas a Convertir" TextType="Text" TextColor="#FF34B3B3" FontSize="50" />
 
-            
+        <Entry x:Name ="textTemperatura" Placeholder="19°" FontSize="30" HorizontalTextAlignment="Center" />
 
-            <Label
+        <Label Text="{Binding Display}" FontAttributes="Bold" FontFamily="Arial" TextColor="#FF55AED1" 
+                FontSize="36" HorizontalTextAlignment="Center" LineBreakMode="TailTruncation"/>
+        
+        <Label Text="{Binding Expression}" FontSize="16" TextColor="gray" HorizontalTextAlignment="Center"/>
 
-                Text="Aplicacion para Convertir Grados Celcius a Grados Farenheit"
-                
-                />
-
-            <Button
-               
-               Text="Convertir"
-
-               
-                />
-
+        <Button BackgroundColor="#FF2D2DB1" Command="{Binding CelsiusCommand}" Text="Convertir a Fahrenheit" FontSize="12"   />
+        <Button  BackgroundColor="#FFA71A1A" Command="{Binding FarenheitCommand}"  Text="Convertir a Celsius"  FontSize="12"  />
 
         </VerticalStackLayout>
-    </ScrollView>
+
+        </ScrollView>
+        
 
 </ContentPage>

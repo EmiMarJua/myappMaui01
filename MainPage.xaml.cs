@@ -133,4 +133,6 @@ public partial class MainPage : ContentPage
 //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     //}
 
+    //CONVERSOR DE TEMPERATURA DE GRADOS CENTIGRADOS A FARENHEIT Y VICEVERSA
+
 }

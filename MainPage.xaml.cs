@@ -38,7 +38,7 @@ public partial class MainPage : ContentPage
     public void OnConvertCelsiustoFarenheit()
     {
 
-       double c = int.Parse(textTemperatura.Text);
+       double c = double.Parse(textTemperatura.Text);
         double f = (c * 9 / 5 ) + 32;
 
         Display = f.ToString("0.##" , CultureInfo.CurrentCulture) + " °F";
@@ -49,7 +49,7 @@ public partial class MainPage : ContentPage
     public void OnConvertFarenheittoCelsius()
     {
         
-        double f = int.Parse(textTemperatura.Text);
+        double f = double.Parse(textTemperatura.Text);
         double c = (f - 32) * 5/9;
 
         Display = c.ToString("0.##",CultureInfo.CurrentCulture) + " °C";
